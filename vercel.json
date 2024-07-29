@@ -1,16 +1,16 @@
-
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "Dockerfile",
-      "use": "@vercel/docker"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/.*",
-      "dest": "/test.js"
-    }
-  ]
-}
+    "version": 2,
+    "builds": [
+      {
+        "src": "test.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "test.js"
+      }
+    ]
+  }
+  
